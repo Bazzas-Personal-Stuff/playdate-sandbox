@@ -1,0 +1,4 @@
+name=Playdate Sandbox
+author=Bailey Gibbons
+description=Sandbox for testing Odin-lang playdate package.
+bundleID=com.bazzagibbs.odin-playdate-sandbox

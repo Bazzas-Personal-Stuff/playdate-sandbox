@@ -1,7 +1,13 @@
-set game_bin="OdinHelloWorld"
-set intermediate_dir="intermediate"
-set output_dir="out"
+@echo off
+set game_bin=PlaydateSandbox
+set intermediate_dir=intermediate
+set output_dir=out
 
-odin build . -out=%intermediate_dir%/pdex.dll -build-mode:shared && \
-%PLAYDATE_SDK_PATH%\bin\pdc %intermediate_dir% %output_dir%\%game_bin%.pdx && \
-PlaydateSimulator %output_dir%\%game_bin%.pdx
+if not exist ".\%intermeidate_dir%" mkdir ".\%intermeidate_dir%"
+if not exist ".\%output_dir%" mkdir ".\%output_dir%"
+
+echo Compiling game dll from Odin source... && ^
+odin build src -out=%intermediate_dir%/pdex.dll -build-mode:shared -debug && ^
+echo Compiling Playdate Executable (pdx)... && ^
+%PLAYDATE_SDK_PATH%\bin\pdc %intermediate_dir% %output_dir%\%game_bin%.pdx && ^
+%PLAYDATE_SDK_PATH%\bin\PlaydateSimulator %output_dir%\%game_bin%.pdx
