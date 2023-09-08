@@ -3,6 +3,7 @@ package main
 import "core:log"
 import "playdate"
 import sys "playdate/system"
+import gfx "playdate/graphics"
 import "playdate/display"
 
 // //////////////////////////
@@ -40,6 +41,7 @@ move_speed: i32 = 10
 offset: [2]i32
 
 update :: proc() -> (should_update_display: bool) {
+    gfx.clear(gfx.Solid_Color.white)
 
     buttons, _, _ := sys.get_button_state()
 
