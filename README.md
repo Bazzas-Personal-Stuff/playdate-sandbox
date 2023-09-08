@@ -4,6 +4,6 @@ A sandbox project to test my Odin bindings for the Playdate SDK. The bindings ca
 
 ## Cloning this repository
 
-This repository contains a submodule for my Playdate package (located in `src/playdate`, so it must be cloned recursively:
+This repository contains a submodule for my Playdate package (located in `src/playdate`), so it must be cloned recursively:
 
 `git clone --recursive https://github.com/Bazzas-Personal-Stuff/playdate-sandbox`
