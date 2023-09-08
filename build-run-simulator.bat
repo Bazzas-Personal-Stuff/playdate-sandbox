@@ -1,3 +1,5 @@
+REM Credit to Colin Bellino for the base Playdate build script.
+
 @echo off
 set game_bin=PlaydateSandbox
 set intermediate_dir=intermediate
